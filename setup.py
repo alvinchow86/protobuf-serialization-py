@@ -8,7 +8,7 @@ setup(
     name='protobuf-serialization',
     version=__version__,
     description="Helpers for protobuf3 serialization and deserialization",
-    url='https://github.com/alvinchow86/protobuf-serialization',
+    url='https://github.com/alvinchow86/protobuf-serialization-py',
     author='Alvin Chow',
     author_email='alvinchow86@gmail.com',
     license="MIT",
