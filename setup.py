@@ -5,10 +5,19 @@ __version__ = None
 exec(open('protobuf_serialization/version.py').read())
 
 setup(
-    name='protobuf-serialization-py',
+    name='protobuf-serialization',
     version=__version__,
-    description="gRPC Python library",
+    description="Helpers for protobuf3 serialization and deserialization",
+    url='https://github.com/alvinchow86/protobuf-serialization',
     author='Alvin Chow',
+    author_email='alvinchow86@gmail.com',
+    license="MIT",
+    classifiers=[
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+    ],
     packages=[
         'protobuf_serialization',
         'protobuf_serialization/deserialization',
@@ -19,5 +28,6 @@ setup(
     install_requires=[
         'python-dateutil>=2.7',
         'protobuf>=3.6.0',
-    ]
+    ],
+    python_requires='>=3.6',
 )
