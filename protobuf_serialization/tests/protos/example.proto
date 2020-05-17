@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/wrappers.proto";
+
+package example;
+
+
+service FooApi {
+  rpc GetFoo(FooRequest) returns (Foo);
+  rpc GetFooRequestStream(stream FooRequest) returns (Foo);
+  rpc GetFooResponseStream(FooRequest) returns (stream Foo);
+  rpc GetFooBidirectional(stream FooRequest) returns (stream Foo);
+}
+
+message FooRequest {
+  string value = 1;
+}
+
+message Foo {
+  uint64 id = 1;
+  string name = 2;
+  google.protobuf.StringValue content = 3;
+  google.protobuf.BoolValue is_active = 4;
+  google.protobuf.UInt64Value count = 5;
+  google.protobuf.Timestamp created_at = 6;
+}
+
+
+// test more advanced things
+message Coin {
+  map<string, string> tags = 1;
+  repeated string names = 2;
+  repeated Category categories = 3;
+}
+
+message Parent {
+  string name = 1;
+  google.protobuf.StringValue label = 2;
+  Child child = 3;
+}
+
+message Child {
+  string name = 1;
+  google.protobuf.StringValue label = 2;
+  Category category = 3;
+}
+
+message Bar {
+  Category category = 1;
+}
+
+message Category {
+  string name = 1;
+  string type = 2;
+}

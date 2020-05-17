@@ -1,0 +1,7 @@
+#!/bin/bash
+cd compiled
+rm -rf *pb2*.py
+python -m grpc_tools.protoc -I ../protos --python_out=. --grpc_python_out=. ../protos/*.proto
+sed -i -E 's/import example_pb2/from . import example_pb2/' *.py
+# clean up sed backup file
+rm -rf *-E
