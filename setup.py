@@ -13,7 +13,6 @@ setup(
         'protobuf_serialization',
         'protobuf_serialization/deserialization',
         'protobuf_serialization/serialization',
-        'protobuf_serialization/test',
     ],
     package_data={},
     scripts=[],
