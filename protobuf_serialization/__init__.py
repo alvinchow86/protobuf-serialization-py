@@ -7,3 +7,4 @@ from protobuf_serialization.serialization import (
     serialize_to_protobuf, get_serializer_for_proto_cls
 )
 from protobuf_serialization.serialization import fields
+from protobuf_serialization.serialization import serializer
