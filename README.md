@@ -6,4 +6,4 @@ Utils to help with serialization and deserialization of Python objects into prot
 pip install protobuf-serialization
 ```
 
-[![CircleCI](https://circleci.com/gh/alvinchow86/sqlalchemy-postgres-bigid.svg?style=svg)](https://circleci.com/gh/alvinchow86/sqlalchemy-postgres-bigid)
+[![CircleCI](https://circleci.com/gh/alvinchow86/protobuf-serialization-py.svg?style=svg)](https://circleci.com/gh/alvinchow86/protobuf-serialization-py)
