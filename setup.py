@@ -1,13 +1,20 @@
+from os import path
 from setuptools import setup
 
 # get version
 __version__ = None
 exec(open('protobuf_serialization/version.py').read())
 
+this_directory = path.abspath(path.dirname(__file__))
+with open(path.join(this_directory, 'README.md')) as f:
+    long_description = f.read()
+
 setup(
     name='protobuf-serialization',
     version=__version__,
     description="Helpers for protobuf3 serialization and deserialization",
+    long_description=long_description,
+    long_description_content_type='text/markdown',
     url='https://github.com/alvinchow86/protobuf-serialization-py',
     author='Alvin Chow',
     author_email='alvinchow86@gmail.com',
